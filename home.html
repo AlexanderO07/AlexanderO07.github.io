@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Alexander Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+	<script src="script.js"></script>
+	<link rel="icon" href="logo-better.png" sizes="36x36">
+</head>
+
+<body>
+	<h1 class="my-name">L bozo</h1>
+	<!--MY NAME BIG ON FRONT PAGE WITH 1 OR 2 IMAGES-->
+	<div class="menu-open">menu</div>
+	<div class="nav-container">
+		<div class="menu-close">close</div>
+
+
+		<!-- <div class="logo-topleft">
+			<img src="AO.png" draggable="false" width="100px" height="100px"
+				style="position: absolute; margin-left: 5px; margin-top: 3px;"></img>
+		</div> -->
+
+
+		<!-- icons and links -->
+		<div class="socials">
+			<img src="61109.png" alt="linkedin logo" width="30px" height="30px"></img>
+			<span class="social-linkedin" style="cursor:pointer;">linkedin</span>
+			<img src="25657.png" alt="github logo" width="30px" height="30px"></img>
+			<span class="social-github" style="cursor:pointer;">github</span>
+			<img src="1419647.png" alt="instagram logo" width="30px" height="30px"></img>
+			<span class="social-instagram" style="cursor:pointer;">instagram</span>
+		</div>
+		<script>
+			//socials on-click functionality
+			const linkedinSpan = document.querySelector(".social-linkedin");
+			const githubinSpan = document.querySelector(".social-github");
+			const instagraminSpan = document.querySelector(".social-instagram");
+
+			linkedinSpan.addEventListener("click", function () {
+				window.location = "https://www.linkedin.com/in/alexander-onyiuke/"
+			});
+			githubinSpan.addEventListener("click", function () {
+				window.location = "https://github.com/AlexanderO07"
+			});
+			instagraminSpan.addEventListener("click", function () {
+				window.location = "https://www.instagram.com/alex_onyiuke007/"
+			});
+		</script>
+		<!-- navigation -->
+		<nav class="menu">
+			<div class="menu__item">
+				<div class="home__menu-link" style="width: 270px;">
+					<a class="menu__item-link">Home</a>
+					<img class="menu__item-img" alt="crossroads in sunset" src="menu-img-one.png"
+						style="scale: 120%; margin-left: 5px;" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>Home - Home - Home - Home - Home - Home - Home - Home - Home - Home - Home - Home -
+								Home -
+								Home</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item">
+				<div class="projects__menu-link" style="width: 370px;">
+					<a class="menu__item-link">Showcase</a>
+					<img class="menu__item-img" alt="code directories" src="menu-img-two.png" style="scale: 120%;" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>Projects - Projects - Projects - Projects - Projects - Projects
+								- Projects - Projects - Projects - Projects - Projects - Projects - Projects
+								- Projects</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item">
+				<div class="about__menu-link" style="width: 330px;">
+					<a class="menu__item-link">My Story</a>
+					<img class="menu__item-img" alt="city skyline" src="menu-img-three.png" style="scale: 120%;" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>About - About - About - About - About - About - About - About - About - About - About
+								-
+								About - About - About</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item">
+				<div class="contact__menu-link" style="width: 340px;">
+					<a class="menu__item-link">Inquiries</a>
+					<img class="menu__item-img" alt="yellow telephone" src="menu-img-four.png" style="scale: 120%;" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>Contact - Contact - Contact - Contact - Contact - Contact -
+								Contact - Contact - Contact - Contact - Contact - Contact - Contact -
+								Contact</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- wireframe sphere -->
+			<div id="animationContainer"></div>
+			<!-- three.js setup -->
+			<script src="js three.js"></script>
+			<script id="wireframe">
+				// camera
+				const scene = new THREE.Scene();
+				const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.5, 500);
+
+				// renderer
+				const renderer = new THREE.WebGLRenderer();
+				renderer.setSize(window.innerWidth, window.innerHeight);
+				document.getElementById("animationContainer").appendChild(renderer.domElement);
+
+				// geometry
+				const geometry = new THREE.SphereGeometry(10, 14, 10);
+				const material = new THREE.MeshBasicMaterial({ color: 0xffff00 });
+				const wireframe = new THREE.WireframeGeometry(geometry);
+				const sphere = new THREE.Mesh(wireframe, material);
+				const line = new THREE.LineSegments(wireframe);
+
+				// material-styling
+				line.material.depthTest = false;
+				line.material.opacity = 0.9;
+				line.material.transparent = true;
+				scene.add(line);
+
+				// camera-positioning
+				camera.position.z = 20;
+
+				// call animate function
+				function animate() {
+					requestAnimationFrame(animate);
+
+					line.rotation.x += 0.01;
+					line.rotation.y += 0.01;
+					renderer.setClearColor(0xffff00, 0); //0 means the canvas is transparent
+					renderer.render(scene, camera);
+				};
+				console.log("WIREFRM.%TEST%");
+
+				// run final Animation
+				animate();
+			</script>
+		</nav>
+	</div>
+	<script>
+		// menu slide-out-right/left animation
+		var t1 = new TimelineMax({ paused: true });
+		var t2 = new TimelineMax({ paused: true });
+
+		t1.to(".nav-container", 1, {
+			left: 0,
+			ease: Expo.easeInOut,
+		});
+
+		t2.to(".nav-container", 1, {
+			left: +100,
+			ease: Expo.easeInOut,
+		});
+
+		t1.staggerFrom(
+			".menu > div",
+			0.8,
+			{ y: 100, opacity: 0, ease: Expo.easeOut },
+			"0.1",
+			"-=0.4"
+		);
+
+		t1.staggerFrom(
+			".socials",
+			0.8,
+			{ y: 100, opacity: 0, ease: Expo.easeOut },
+			"0.4",
+			"-=0.6"
+		);
+
+		t1.reverse();
+		$(document).on("click", ".menu-open", function () { //open 
+			t1.reversed(!t1.reversed());
+		});
+		$(document).on("click", ".menu-close", function () { //close
+			t1.reversed(!t1.reversed());
+		});
+		$(document).on("click", ".home__menu-link", function () { //close (home)
+			t1.reversed(!t1.reversed());
+		});
+
+		$(document).on("click", ".contact__menu-link", function () { //close (contact)
+			t2.reversed(!t2.reversed());
+			t1.reversed(!t1.reversed());
+			this.window.location.href('"http://www.google.com"');
+		});
+	</script>
+</body>
+<style>
+	@font-face {
+		font-family: Xfont;
+		src: url(Voyage-Regular.otf);
+	}
+
+	@font-face {
+		font-family: Monopop;
+		src: url(Monopop\ Regular.otf);
+	}
+
+	@font-face {
+		font-family: Osbourne;
+		src: url(OsbournePro-Light.otf);
+	}
+
+	@font-face {
+		font-family: BoldFont;
+		src: url(Confillia\ Normal.otf);
+	}
+</style>
+
+</html>
