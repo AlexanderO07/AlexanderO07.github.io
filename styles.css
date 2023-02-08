@@ -13,6 +13,7 @@ body {
   font-size: 6rem;
   font-weight: normal;
   color: black;
+  opacity: 0.3;
   position: absolute;
   font-family: BoldFont;
   top: 40%;

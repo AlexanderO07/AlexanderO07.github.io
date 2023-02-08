@@ -11,6 +11,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
 	<script src="script.js"></script>
 	<link rel="icon" href="logo-better.png" sizes="36x36">
+	<script>
+		console.log(
+		'%cWEBPAGE*/LOAD - $#R0000007% %c= Passed', // Console Message
+		'color: lightgrey',
+		'color: green', // CSS Style
+		);
+	</script>
 </head>
 
 <body>
@@ -147,8 +154,12 @@
 					renderer.setClearColor(0xffff00, 0); //0 means the canvas is transparent
 					renderer.render(scene, camera);
 				};
-				console.log("WIREFRM.%TEST%");
-
+				
+				console.log(
+					'%cWIREFRM*/RENDER/ %c= Passed', // Console Message
+					'color: lightgrey',
+					'color: green', // CSS Style
+				);
 				// run final Animation
 				animate();
 			</script>
@@ -200,25 +211,25 @@
 
 		$(document).on("click", ".contact__menu-link", function () { //open (contact)
 			t1.reversed(!t1.reversed());
-		setTimeout(function(){
-			window.location='contact.html';
-		},1780);
+			setTimeout(function () {
+				window.location = 'contact.html';
+			}, 1780);
 		});
 
 		$(document).on("click", ".about__menu-link", function () { //open (about)
 			t2.reversed(!t2.reversed());
 			t1.reversed(!t1.reversed());
-		setTimeout(function(){
-			window.location='about.html';
-		},1780);
+			setTimeout(function () {
+				window.location = 'about.html';
+			}, 1780);
 		});
 
 		$(document).on("click", ".projects__menu-link", function () { //open (projects)
 			t2.reversed(!t2.reversed());
 			t1.reversed(!t1.reversed());
-		setTimeout(function(){
-			window.location='projects.html';
-		},1780);
+			setTimeout(function () {
+				window.location = 'projects.html';
+			}, 1780);
 		});
 
 	</script>
