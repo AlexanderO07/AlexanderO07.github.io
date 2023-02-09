@@ -9,19 +9,24 @@ body {
   /* background-image: url(noise_img.png); */
 }
 
-.my-name {
+.backingtext {
   font-size: 6rem;
   font-weight: normal;
+  text-align: justify;
   color: black;
-  opacity: 0.3;
+  opacity: 0.1;
+  letter-spacing: 3rem;
   position: absolute;
   font-family: BoldFont;
   top: 40%;
   left: 50%;
   align-items: center;
-  transform: translate(-50%, -40%);
+  transform: translate(-45%, -50%);
   text-transform: uppercase;
   text-align: center;
+  z-index: -50;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .menu-open {
@@ -127,6 +132,9 @@ input {
   left: 8%;
   top: 10%;
   transform: scale(0);
+  display: flex;
+  justify-content: left;
+  align-items: last baseline;
 }
 
 .home__item-img {
@@ -164,8 +172,8 @@ input {
 }
 
 .marquee__inner {
-  width: fit-content;
   width: -moz-fit-content;
+  width: fit-content;
   display: flex;
   position: relative;
   opacity: 0;
