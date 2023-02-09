@@ -147,11 +147,6 @@ input {
   
 }
 
-.home__menu-link{
-  width: fit-content;
-  user-select: none;
-}
-
 .menu__item-link:hover + .menu__item-img {
   opacity: 1;
   transform: scale(1);
