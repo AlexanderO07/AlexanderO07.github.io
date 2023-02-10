@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 	<title>Alexander Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -12,29 +13,33 @@
 	<script src="script.js"></script>
 	<link rel="icon" href="logo-black.png" sizes="36x36">
 	<script>
-		console.log(
-		'%cWEBPAGE*/LOAD - $#R0000007% %c= Passed', // Console Message
-		'color: lightgrey',
-		'color: green', // CSS Style
-		);
+		if (document != null || undefined) {
+			console.log(
+				'%cWEBPAGE*/LOAD - $#R0000222% %c= Passed', // Console Message
+				'color: grey',
+				'color: lightgreen', // CSS Style
+			);
+		}
+		else {
+			console.log(
+				'%cWEBPAGE*/ERR - $#F00000404% %c = Failed', 
+				'color: grey', 
+				'color: red',
+			);
+		}
+
 	</script>
-	
+
 </head>
 
 <body>
 	<h1 class="backingtext">home</h1>
+	
+
 	<!--MY NAME BIG ON FRONT PAGE WITH 1 OR 2 IMAGES-->
 	<div class="menu-open">menu</div>
 	<div class="nav-container">
 		<div class="menu-close">close</div>
-
-
-		<!-- <div class="logo-topleft">
-			<img src="AO.png" draggable="false" width="100px" height="100px"
-				style="position: absolute; margin-left: 5px; margin-top: 3px;"></img>
-		</div> -->
-
-
 		<!-- icons and links -->
 		<div class="socials">
 			<img src="61109.png" alt="linkedin logo" width="30px" height="30px"></img>
@@ -63,7 +68,7 @@
 		<!-- navigation -->
 		<nav class="menu">
 			<div class="menu__item">
-				<div class="home__menu-link" style="width: 500px;">
+				<div class="home__menu-link" >
 					<a class="menu__item-link">Home</a>
 					<img class="menu__item-img" alt="crossroads in sunset" src="menu-img-one.png"
 						style="scale: 120%; margin-left: 5px;" />
@@ -77,7 +82,7 @@
 				</div>
 			</div>
 			<div class="menu__item">
-				<div class="projects__menu-link" style="width: 500px;">
+				<div class="projects__menu-link" >
 					<a class="menu__item-link">Showcase</a>
 					<img class="menu__item-img" alt="code directories" src="menu-img-two.png" style="scale: 120%;" />
 					<div class="marquee">
@@ -103,7 +108,7 @@
 				</div>
 			</div>
 			<div class="menu__item">
-				<div class="contact__menu-link" style="width: 500px;">
+				<div class="contact__menu-link" >
 					<a class="menu__item-link">Inquiries</a>
 					<img class="menu__item-img" alt="yellow telephone" src="menu-img-four.png" style="scale: 120%;" />
 					<div class="marquee">
@@ -155,32 +160,37 @@
 					renderer.setClearColor(0xffff00, 0); //0 means the canvas is transparent
 					renderer.render(scene, camera);
 				};
-				
-				console.log(
-					'%cWIREFRM*/RENDER/ %c= Passed', // Console Message
-					'color: lightgrey',
-					'color: green', // CSS Style
-				);
 
+				if (scene, camera, geometry, material, sphere, wireframe, line, renderer != null || undefined) {
+					console.log(
+						'%cWIREFRM*/RENDER/ %c= Passed', // Console Message
+						'color: grey',
+						'color: lightgreen', // CSS Style
+					);
+				}
+				else {
+					console.log(
+						'%cWIREFRM*/RENDER/ %c= Failed', // Console Message
+						'color: grey',
+						'color: red', // CSS Style
+					);
+					window.location.reload(); //reload webpage in an attempt to fix the error 
+				}
 
-
-				// run final Animation
+				// run final Animation :)
 				animate();
 			</script>
 		</nav>
 	</div>
 	<script>
-		// menu slide-out-right/left animation
+// Breif background: This script is using the jQuery library to animate a navigation menu. When the menu is clicked open or closed, the script will toggle the state of two TimelineMax objects, t1 and t2, using the reversed method. The animation is created using the to and staggerFrom methods of TimelineMax.
+
+//When a menu link is clicked (home, contact, about, or projects), the corresponding animation will play, and then the script will redirect the user to the specified page after a short delay using window.location. The delay is set using setTimeout.
 		var t1 = new TimelineMax({ paused: true });
 		var t2 = new TimelineMax({ paused: true });
 
 		t1.to(".nav-container", 1, {
 			left: 0,
-			ease: Expo.easeInOut,
-		});
-
-		t2.to(".nav-container", 1, {
-			left: +100,
 			ease: Expo.easeInOut,
 		});
 
@@ -235,7 +245,6 @@
 				window.location = 'projects.html';
 			}, 1780);
 		});
-
 	</script>
 </body>
 <style>
