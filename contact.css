@@ -1,13 +1,12 @@
-* {
-    font-size: 14px;
-    line-height: 1.4;
-}
-
 .form-group {
     margin-top: 180px;
     font-family: 'Courier New', Courier, monospace;
   }
   
+  nav.menu {
+    top: 0;
+  }
+
   .form {
     max-width: 500px;
     margin: 32px auto;
