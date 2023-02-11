@@ -17,7 +17,7 @@ window.addEventListener("resize", function() {
   windowWidth = window.innerWidth;
   
   
-  console.log("Window width:", windowWidth); //clogs up console when resizing (WARNING)
+  // console.log("Window width:", windowWidth); //clogs up console when resizing (WARNING)
 
   if (windowWidth === 1280) {
     console.log(`The window is perfectly sized at ${windowWidth}`); 
@@ -38,7 +38,7 @@ window.addEventListener("resize", function() {
   
 });
 
-  // Creating a new IntersectionObserver API instance to detect whether 
+  // Attempt to fix resizing isssue by creating a new IntersectionObserver instance to detect whether 
   //white background of the nav element is accidently show after resizing the window from small to large.
   let observer;
 

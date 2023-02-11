@@ -2,57 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact Alexander</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Contact Alexander</title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
 	<link rel="stylesheet" type="text/css" href="contact.css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
-    <script src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+	<script src="script.js"></script>
 	<script src="contact.js"></script>
-    <link rel="icon" href="logo-black.png" sizes="36x36">
+	<link rel="icon" href="logo-black.png" sizes="36x36">
 </head>
 
 <body>
-    <h1 class="backingtext">contact</h1>
+	<h1 class="backingtext">contact</h1>
 	<div class="form">
 		<input type="hidden" name="_gotcha" style="display:none !important">
-		<form
-		  action="https://getform.io/f/66a07652-ad83-417f-b088-6b9baa13c8a3"
-		  enctype="multipart/form-data"
-		  method="POST"
-		  target="_blank"
-		>
-		  <div
-			class="form-group"
-		  >
-			<input
-			  type="text"
-			  name="name"
-			  placeholder="Full name"
-			/>
-		  </div>
-		  <div
-			class="form-group"
-		  >
-			<input
-			  type="email"
-			  name="email"
-			  placeholder="Email"
-			/>
-		  </div>
-		  <input
-			type="file"
-			name="file"
-		  />
-		  <button type="submit" disabled>
-			Send
-		  </button>
+		<form action="https://getform.io/f/66a07652-ad83-417f-b088-6b9baa13c8a3" enctype="multipart/form-data"
+			method="POST" target="_blank">
+			<div class="form-group">
+				<input type="text" name="name" placeholder="Full name" />
+			</div>
+			<div class="form-group">
+				<input type="email" name="email" placeholder="Email" />
+			</div>
+			<input type="file" name="file" />
+			<input type="text" name="content" placeholder="Your message">
+			<button type="submit" disabled>
+				Send
+			</button>
 		</form>
-	  </div>
-	
+	</div>
+
 	<div class="menu-open">menu</div>
 	<div class="nav-container">
 		<div class="menu-close">close</div>
@@ -125,7 +107,7 @@
 			</div>
 			<div class="menu__item">
 				<div class="contact__menu-link" style="width: 340px;">
-					<a class="menu__item-link">Inquiries</a>
+					<a class="menu__item-link">Enquiries</a>
 					<img class="menu__item-img" alt="yellow telephone" src="menu-img-four.png" style="scale: 120%;" />
 					<div class="marquee">
 						<div class="marquee__inner">
@@ -228,46 +210,46 @@
 		$(document).on("click", ".home__menu-link", function () { //open (home)
 			t2.reversed(!t2.reversed());
 			t1.reversed(!t1.reversed());
-		setTimeout(function(){
-			window.location='index.html';
-		},1780);
+			setTimeout(function () {
+				window.location = 'index.html';
+			}, 1780);
 		});
 
-        $(document).on("click", ".projects__menu-link", function () { //open (projects)
+		$(document).on("click", ".projects__menu-link", function () { //open (projects)
 			t2.reversed(!t2.reversed());
 			t1.reversed(!t1.reversed());
-		setTimeout(function(){
-			window.location='projects.html';
-		},1780);
+			setTimeout(function () {
+				window.location = 'projects.html';
+			}, 1780);
 		});
 
-        $(document).on("click", ".about__menu-link", function () { //open (about)
+		$(document).on("click", ".about__menu-link", function () { //open (about)
 			t2.reversed(!t2.reversed());
 			t1.reversed(!t1.reversed());
-		setTimeout(function(){
-			window.location='about.html';
-		},1780);
+			setTimeout(function () {
+				window.location = 'about.html';
+			}, 1780);
 		});
 	</script>
-    <style>
-        @font-face {
-            font-family: Xfont;
-            src: url(Voyage-Regular.otf);
-        }
-    
-        @font-face {
-            font-family: Monopop;
-            src: url(Monopop\ Regular.otf);
-        }
-    
-        @font-face {
-            font-family: Osbourne;
-            src: url(OsbournePro-Light.otf);
-        }
-    
-        @font-face {
-            font-family: BoldFont;
-            src: url(Confillia\ Normal.otf);
-        }
-    </style>
+	<style>
+		@font-face {
+			font-family: Xfont;
+			src: url(Voyage-Regular.otf);
+		}
+
+		@font-face {
+			font-family: Monopop;
+			src: url(Monopop\ Regular.otf);
+		}
+
+		@font-face {
+			font-family: Osbourne;
+			src: url(OsbournePro-Light.otf);
+		}
+
+		@font-face {
+			font-family: BoldFont;
+			src: url(Confillia\ Normal.otf);
+		}
+	</style>
 </body>
