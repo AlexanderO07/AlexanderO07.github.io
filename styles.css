@@ -6,7 +6,6 @@
 body {
   margin: 0;
   background: #babab9;
-  /* background-image: url(noise_img.png); */
 }
 
 .backingtext {
@@ -25,6 +24,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   z-index: -50;
+  -ms-user-select: none;
   user-select: none;
   -webkit-user-select: none;
 }

@@ -1,0 +1,123 @@
+.title * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: LargeTitle;
+  }
+  
+  body {
+    background: #babab9;
+  }
+
+  .backingtext{
+    opacity: 0;
+    z-index: -50;
+    animation: fade-out 3.5s ease-in 1
+  }
+ /* short backingtext fade-out that can act as a loader */
+  @keyframes fade-out {
+    0% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid red; */
+    width: 400px;
+    height: 300px;
+  }
+  
+  .block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+  
+  .b-1 {
+    background: url("yu-kato.jpg") 50% 50% no-repeat;
+    background-size: cover;
+  }
+  
+  .b-2 {
+    background: url("david-clode.jpg") 50% 50% no-repeat;
+    background-size: cover;
+  }
+  
+  .b-3 {
+    background: url("esma.jpg") 50% 50% no-repeat;
+    background-size: cover;
+  }
+  
+  .b-4 {
+    background: url("bg-01.jpg") 50% 50% no-repeat;
+    background-size: cover;
+  }
+  
+  .b-5 {
+    background: url("horse.jpg") 50% 50% no-repeat;
+    background-size: cover;
+  }
+  
+  .b-6 {
+    background: url("nathan-defiesta.jpg") 50% 50% no-repeat;
+    background-size: cover;
+  }
+  
+  .b-7 {
+    background: url("I-nah.jpg") 50% 50% no-repeat;
+    background-size: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    bottom: -10rem;
+    background: #babab9;
+    z-index: 0;
+  }
+  
+  .title {
+    opacity: 1;
+    margin-top: 20rem;
+    text-align: center;
+    font-size: 5.5em;
+    letter-spacing: 2px;
+    color: #393833;
+    overflow: hidden;
+    z-index: 20;
+  }
+  
+  .title .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+  
+@media screen and (max-width: 1200px) {
+    .title * , html.touch{
+      font-size: 35px; 
+      overflow-y: hidden;
+      height: 100%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .title * , html.touch{
+      font-size: 30px; 
+      overflow-y: hidden;
+    }
+}
+@media screen and (max-width: 400px) {
+    .title * {
+      font-size: 24px; 
+      overflow-y: hidden;
+      height: 100%;
+    }
+}

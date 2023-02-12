@@ -36,9 +36,10 @@ window.addEventListener("resize", function() {
     contactCbox.style.width = `${newWidth4}px`;
   }
   
+  this.window.location.reload(); // odd but simple fix for menu sizing issue
 });
 
-  // Attempt to fix resizing isssue by creating a new IntersectionObserver instance to detect whether 
+  // 2nd Attempt to fix resizing isssue by creating a new IntersectionObserver instance to detect whether 
   //white background of the nav element is accidently show after resizing the window from small to large.
   let observer;
 
@@ -63,3 +64,4 @@ window.addEventListener("resize", function() {
   createObserver();
   observer.observe(target);
 window.addEventListener("resize", handleResize);
+

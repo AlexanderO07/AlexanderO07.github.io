@@ -1,100 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-		<title>Alexander Portfolio</title>
-		<link rel="stylesheet" type="text/css" href="styles.css" />
-		<link rel="stylesheet" type="text/css" href="index.css" />
-		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
-		<script src="script.js"></script>
-		<link rel="icon" href="plus-logo.png" sizes="36x36">
-
-	<script>
-		if (screen.width <= 480) {
-  window.location.replace("mobile.html"); // a home page for mobile screen sizes
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mobile Alexander</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="icon" href="plus-logo.png" sizes="36x36">
+    <script>
+		if (screen.width >= 1024) {
+  window.location.replace("index.html"); // a fallback if width dimenstion is enlarged
 }
-	</script>
-
-	<script>
-		if (document != null || undefined) {
-			console.log(
-				'%cWEBPAGE*/LOAD - $#R0000222% %c= Passed', // Console Message
-				'color: grey',
-				'color: lightgreen', // CSS Style
-			);
-		}
-		else {
-			console.warn(
-				'%cWEBPAGE*/ERR - $#F00000404% %c = Failed', 
-				'color: grey', 
-				'color: red',
-			);
-		window.location.reload();
-		}
-
-		window.onscroll = () => { window.scroll(0, 0); }; 
 	</script>
 </head>
 
 <body>
-	<h1 class="backingtext">home</h1>
-  <div class="container">
-    <div class="block b-1"></div>
-    <div class="block b-2"></div>
-    <div class="block b-3"></div>
-    <div class="block b-4"></div>
-    <div class="block b-5"></div>
-    <div class="block b-6"></div>
-    <div class="block b-7"></div>
-  </div>
-  <div class="overlay"></div>
-  <p class="title">Alexander  Onyiuke</p>
-  <!-- home page js animation code-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-  <script>
-    // Wrap every letter in a span
-    var textWrapper = document.querySelector(".title");
-    textWrapper.innerHTML = textWrapper.textContent.replace(
-      /\S/g,
-      "<span class='letter'>$&</span>"
-    );
-    anime.timeline().add({
-      targets: ".title .letter",
-      translateY: [-200, 0],
-      easing: "easeOutExpo",
-      duration: 1400,
-      delay: (el, i) => 6500 + 40 * i,
-    });
-    TweenMax.staggerFrom(
-      ".container > .block",
-      2, {
-        y: "110%",
-        ease: Expo.easeInOut,
-        delay: 1,
-      },
-      0.5
-    );
-    TweenMax.to(".overlay", 0.5, {
-      y: "100%",
-      ease: Expo.easeInOut,
-      delay: 5.2,
-    });
-    TweenMax.to(".container", 2, {
-      scale: "2.25",
-      y: "90%",
-      ease: Expo.easeInOut,
-      delay: 5.5,
-    });
-  </script>
-	<!-- same relative position as the "close" button -->
-	<div class="menu-open" style="transform: translate(-5%, 0%);">menu</div> 
+    <h1 class="backingtext">mobile</h1>
+	<div class="menu-open">menu</div>
 	<div class="nav-container">
 		<div class="menu-close">close</div>
 		<!-- icons and links -->
@@ -125,7 +51,7 @@
 		<!-- navigation -->
 		<nav class="menu">
 			<div class="menu__item">
-				<div class="home__menu-link" >
+				<div class="home__menu-link">
 					<a class="menu__item-link">Home</a>
 					<img class="menu__item-img" alt="crossroads in sunset" src="menu-img-one.png"
 						style="scale: 120%; margin-left: 5px;" />
@@ -139,7 +65,7 @@
 				</div>
 			</div>
 			<div class="menu__item">
-				<div class="projects__menu-link" >
+				<div class="projects__menu-link">
 					<a class="menu__item-link">Showcase</a>
 					<img class="menu__item-img" alt="code directories" src="menu-img-two.png" style="scale: 120%;" />
 					<div class="marquee">
@@ -152,7 +78,7 @@
 				</div>
 			</div>
 			<div class="menu__item">
-				<div class="about__menu-link" style="width: 400px;">
+				<div class="about__menu-link">
 					<a class="menu__item-link">My Story</a>
 					<img class="menu__item-img" alt="city skyline" src="menu-img-three.png" style="scale: 120%;" />
 					<div class="marquee">
@@ -164,8 +90,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="menu__item">
-				<div class="contact__menu-link" >
+			<div class="menu__item" style="width: 500px;" >
+				<div class="contact__menu-link">
 					<a class="menu__item-link">Enquiries</a>
 					<img class="menu__item-img" alt="yellow telephone" src="menu-img-four.png" style="scale: 120%;" />
 					<div class="marquee">
@@ -217,37 +143,23 @@
 					renderer.setClearColor(0xffff00, 0); //0 means the canvas is transparent
 					renderer.render(scene, camera);
 				};
-
-				if (scene, camera, geometry, material, sphere, wireframe, line, renderer != null || undefined) {
-					console.log(
-						'%cWIREFRM*/RENDER/ %c= Passed', // Console Message
-						'color: grey',
-						'color: lightgreen', // CSS Style
-					);
-				}
-				else {
-					console.log(
-						'%cWIREFRM*/RENDER/ %c= Failed', // Console Message
-						'color: grey',
-						'color: red', // CSS Style
-					);
-					window.location.reload(); //reload webpage in an attempt to fix the error 
-				}
-
-				// run final Animation :)
+				// run final Animation
 				animate();
 			</script>
 		</nav>
 	</div>
 	<script>
-// Breif background: This script is using the jQuery library to animate a navigation menu. When the menu is clicked open or closed, the script will toggle the state of two TimelineMax objects, t1 and t2, using the reversed method. The animation is created using the to and staggerFrom methods of TimelineMax.
-
-//When a menu link is clicked (home, contact, about, or projects), the corresponding animation will play, and then the script will redirect the user to the specified page after a short delay using window.location. The delay is set using setTimeout.
+		// menu slide-out-right/left animation
 		var t1 = new TimelineMax({ paused: true });
 		var t2 = new TimelineMax({ paused: true });
 
 		t1.to(".nav-container", 1, {
 			left: 0,
+			ease: Expo.easeInOut,
+		});
+
+		t2.to(".nav-container", 1, {
+			left: +100,
 			ease: Expo.easeInOut,
 		});
 
@@ -271,63 +183,57 @@
 		$(document).on("click", ".menu-open", function () { //open 
 			t1.reversed(!t1.reversed());
 		});
-
 		$(document).on("click", ".menu-close", function () { //close
 			t1.reversed(!t1.reversed());
 		});
-
-		$(document).on("click", ".home__menu-link", function () { //close (home)
+		$(document).on("click", ".home__menu-link", function () { //close (mobile)
 			t1.reversed(!t1.reversed());
-		});
-
-		$(document).on("click", ".contact__menu-link", function () { //open (contact)
-			t1.reversed(!t1.reversed());
-			setTimeout(function () {
-				window.location = 'contactV2.html';
-			}, 1780);
 		});
 
 		$(document).on("click", ".about__menu-link", function () { //open (about)
 			t2.reversed(!t2.reversed());
 			t1.reversed(!t1.reversed());
-			setTimeout(function () {
-				window.location = 'about.html';
-			}, 1780);
+		setTimeout(function(){
+			window.location='about.html';
+		},1780);
 		});
 
-		$(document).on("click", ".projects__menu-link", function () { //open (projects)
+        
+        $(document).on("click", ".projects__menu-link", function () { //open (projects)
 			t2.reversed(!t2.reversed());
 			t1.reversed(!t1.reversed());
-			setTimeout(function () {
-				window.location = 'projects.html';
-			}, 1780);
+		setTimeout(function(){
+			window.location='projects.html';
+		},1780);
 		});
+
+        $(document).on("click", ".contact__menu-link", function () { //open (contact)
+			t1.reversed(!t1.reversed());
+		setTimeout(function(){
+			window.location='contactV2.html';
+		},1780);
+		});
+
 	</script>
+    <style>
+        @font-face {
+            font-family: Xfont;
+            src: url(Voyage-Regular.otf);
+        }
+    
+        @font-face {
+            font-family: Monopop;
+            src: url(Monopop\ Regular.otf);
+        }
+    
+        @font-face {
+            font-family: Osbourne;
+            src: url(OsbournePro-Light.otf);
+        }
+    
+        @font-face {
+            font-family: BoldFont;
+            src: url(Confillia\ Normal.otf);
+        }
+    </style>
 </body>
-<style>
-	@font-face {
-		font-family: Xfont;
-		src: url(Voyage-Regular.otf);
-	}
-
-	@font-face {
-		font-family: Monopop;
-		src: url(Monopop\ Regular.otf);
-	}
-
-	@font-face {
-		font-family: Osbourne;
-		src: url(OsbournePro-Light.otf);
-	}
-
-	@font-face {
-		font-family: BoldFont;
-		src: url(Confillia\ Normal.otf);
-	}
-
-	@font-face {
-		font-family: LargeTitle;
-		src: url(CosiTimes-Bold.ttf);
-	}
-</style>
-	</html>
