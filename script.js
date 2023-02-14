@@ -23,7 +23,7 @@ window.addEventListener("resize", function() {
     console.log(`The window is perfectly sized at ${windowWidth}`); 
   } else if (windowWidth < 1280) {
     const homeCbox = document.querySelector(".home__menu-link"); //home
-    const newWidth1 = homeCbox.offsetWidth - (windowWidth - 270);
+    const newWidth1 = homeCbox.offsetWidth - (windowWidth - 290);
     homeCbox.style.width = `${newWidth1}px`;
     const projectsCbox = document.querySelector(".projects__menu-link"); //projects
     const newWidth2 = projectsCbox.offsetWidth - (windowWidth - 370);
@@ -64,4 +64,5 @@ window.addEventListener("resize", function() {
   createObserver();
   observer.observe(target);
 window.addEventListener("resize", handleResize);
+
 
