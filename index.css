@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: LargeTitle;
+    color-interpolation-filters: linearRGB;
+    color:lightgreen;
+    mix-blend-mode: difference;
   }
   
   body {
