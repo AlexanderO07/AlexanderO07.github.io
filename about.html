@@ -2,32 +2,27 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About Alexander</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
-    <script src="script.js"></script>
-    <script src="about.js"></script>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>About Alexander</title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+	<script src="script.js"></script>
+	<script src="about.js"></script>
 
-    <link rel="icon" href="plus-logo.png" sizes="36x36">
+	<link rel="icon" href="plus-logo.png" sizes="36x36">
 </head>
 
 <body>
-    <h1 class="backingtext">about</h1>
-	<!-- MAIN or HEADER tag here that will be the start of the projcets webpage-->
-	<!--horizontal parallax scroll image gallery-->
-	<!--or sectioned slider div the reveal various projects pages-->
-	
-
+	<h1 class="backingtext">about</h1>
 	<div class="menu-open">menu</div>
 	<div class="nav-container">
 		<div class="menu-close">close</div>
 		<!-- icons and links -->
 		<div class="socials">
-			<img src="61109.png" alt="linkedin logo" width	="30px" height="30px"></img>
+			<img src="61109.png" alt="linkedin logo" width="30px" height="30px"></img>
 			<span class="social-linkedin" style="cursor:pointer;">linkedin</span>
 			<img src="25657.png" alt="github logo" width="30px" height="30px"></img>
 			<span class="social-github" style="cursor:pointer;">github</span>
@@ -92,7 +87,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="menu__item" style="width: 500px;" >
+			<div class="menu__item" style="width: 500px;">
 				<div class="contact__menu-link">
 					<a class="menu__item-link">Enquiries</a>
 					<img class="menu__item-img" alt="yellow telephone" src="menu-img-four.png" style="scale: 120%;" />
@@ -195,47 +190,47 @@
 		$(document).on("click", ".home__menu-link", function () { //open (home)
 			t2.reversed(!t2.reversed());
 			t1.reversed(!t1.reversed());
-		setTimeout(function(){
-			window.location='index.html';
-		},1780);
+			setTimeout(function () {
+				window.location = 'index.html';
+			}, 1780);
 		});
 
-        
-        $(document).on("click", ".projects__menu-link", function () { //open (projects)
+
+		$(document).on("click", ".projects__menu-link", function () { //open (projects)
 			t2.reversed(!t2.reversed());
 			t1.reversed(!t1.reversed());
-		setTimeout(function(){
-			window.location='projects.html';
-		},1780);
+			setTimeout(function () {
+				window.location = 'projects.html';
+			}, 1780);
 		});
 
-        $(document).on("click", ".contact__menu-link", function () { //open (contact)
+		$(document).on("click", ".contact__menu-link", function () { //open (contact)
 			t1.reversed(!t1.reversed());
-		setTimeout(function(){
-			window.location='contactV2.html';
-		},1780);
+			setTimeout(function () {
+				window.location = 'contactV2.html';
+			}, 1780);
 		});
 
 	</script>
-    <style>
-        @font-face {
-            font-family: Xfont;
-            src: url(Voyage-Regular.otf);
-        }
-    
-        @font-face {
-            font-family: Monopop;
-            src: url(Monopop\ Regular.otf);
-        }
-    
-        @font-face {
-            font-family: Osbourne;
-            src: url(OsbournePro-Light.otf);
-        }
-    
-        @font-face {
-            font-family: BoldFont;
-            src: url(Confillia\ Normal.otf);
-        }
-    </style>
+	<style>
+		@font-face {
+			font-family: Xfont;
+			src: url(Voyage-Regular.otf);
+		}
+
+		@font-face {
+			font-family: Monopop;
+			src: url(Monopop\ Regular.otf);
+		}
+
+		@font-face {
+			font-family: Osbourne;
+			src: url(OsbournePro-Light.otf);
+		}
+
+		@font-face {
+			font-family: BoldFont;
+			src: url(Confillia\ Normal.otf);
+		}
+	</style>
 </body>

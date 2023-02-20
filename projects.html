@@ -7,22 +7,64 @@
     <title>Project Wheel</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" type="text/css" href="projects.css" />
-
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"> </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
     <script src="script.js"></script>
-
     <script src="projects.js"></script>
-
-    <!-- <script src="projects.js"></script> -->
+    <script src="projects.js"></script>
     <link rel="icon" href="plus-logo.png" sizes="36x36">
 </head>
 
 <body>
-    <h1 class="backingtext">projects</h1>
-    <!--PROJECT HORIZONTAL PARALLAX SCROLL-->
+    <!--PROJECT SCROLL-->
+	<div class="slider">
+		<div class="nav">
+			<div class="next">
+				<svg viewBox="0 0 50 9">
+					<path d="m0 4.5 5-3m-5 3 5 3m45-3h-77"></path>
+				</svg>
+			</div>
+			<div class="prev">
+				<svg viewBox="0 0 50 9">
+					<path d="m0 4.5 5-3m-5 3 5 3m45-3h-77"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="item is-active">
+			<div class="content">
+				<div class="wrap">Interstellar Insights</div>
+			</div>
+			<div class="img-wrapper">
+				<div class="img">
+					<img src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=671&q=80" alt=""/>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<div class="content">
+				<div class="wrap">ClearSounds</div>
+			</div>
+			<div class="img-wrapper">
+				<div class="img">
+					<img src="https://images.unsplash.com/photo-1587714656374-fb3c9c3a4977?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt=""/>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<div class="content">
+				<div class="wrap">MovieMind</div>
+			</div>
+			<div class="img-wrapper">
+				<div class="img">
+					<img src="https://images.unsplash.com/photo-1509281373149-e957c6296406?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=728&q=80" alt=""/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="cursor"></div>
 	<div class="menu-open">menu</div>
 	<div class="nav-container">
 		<div class="menu-close">close</div>
