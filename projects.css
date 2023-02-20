@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: auto;
 }
 
 .slider {
@@ -141,7 +142,7 @@
     width: 20px;
     height: 20px;
     background: darkred;
-    scale: 0.8;
+    transform: scale(0.8);
     border-radius: 50%;
     mix-blend-mode: difference;
     pointer-events: none;
