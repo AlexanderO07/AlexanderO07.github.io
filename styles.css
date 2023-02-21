@@ -213,17 +213,6 @@ input {
   }
 }
 
-@media (max-width: 2560px) {
-
-  .menu__item-link,
-  .marquee span {
-    white-space: nowrap;
-    font-size: 3vw;
-    padding: 0 1vw;
-    line-height: 1.15;
-  }
-}
-
 @media (max-width: 1440px) {
 
   .menu__item-link,
