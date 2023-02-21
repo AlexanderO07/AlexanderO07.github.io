@@ -30,7 +30,7 @@ window.addEventListener("resize", function() {
     const newWidth2 = projectsCbox.offsetWidth - (windowWidth - 370);
     projectsCbox.style.width = `${newWidth2}px`;
     const aboutCbox = document.querySelector(".about__menu-link"); //about
-    const newWidth3 = aboutCbox.offsetWidth - (windowWidth - 230);
+    const newWidth3 = aboutCbox.offsetWidth - (windowWidth - 330);
     aboutCbox.style.width = `${newWidth3}px`;
     const contactCbox = document.querySelector(".contact__menu-link"); //contact
     const newWidth4 = contactCbox.offsetWidth - (windowWidth - 340);
