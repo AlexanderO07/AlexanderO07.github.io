@@ -1,6 +1,7 @@
 * {
   font-family: Xfont;
   overflow: hidden;
+  cursor: auto;
 }
 
 body {
@@ -32,13 +33,15 @@ body {
 .menu-open {
   color: rgb(90, 90, 90);
   position: fixed;
-} 
+}
 
 .menu-open:hover {
-  -webkit-transition: color 0.5s; /* For Safari 3.0 to 6.0 */
-  transition: color 0.5s; /* For modern browsers */
-  color: red;
-  -webkit-text-fill: 2px red;
+  -webkit-transition: color 0.5s;
+  /* For Safari 3.0 to 6.0 */
+  transition: color 0.5s;
+  /* For modern browsers */
+  color: goldenrod;
+  -webkit-text-fill: 2px goldenrod;
 }
 
 .menu-open,
@@ -75,12 +78,10 @@ input {
   font-size: 20px;
   text-decoration: none;
   background: linear-gradient(to right, whitesmoke, whitesmoke),
-    linear-gradient(
-      to right,
+    linear-gradient(to right,
       rgb(199, 95, 95),
       rgba(255, 0, 180, 1),
-      rgb(169, 4, 202)
-    );
+      rgb(169, 4, 202));
   background-size: 100% 3px, 0 2px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
@@ -105,6 +106,7 @@ input {
   position: relative;
   padding: 0 6vw;
 }
+
 .menu__item-link {
   display: inline-block;
   cursor: pointer;
@@ -148,10 +150,10 @@ input {
   left: 8%;
   top: 10%;
   z-index: 0;
-  
+
 }
 
-.menu__item-link:hover + .menu__item-img {
+.menu__item-link:hover+.menu__item-img {
   opacity: 1;
   transform: scale(1);
   transition: all 0.4s;
@@ -186,7 +188,7 @@ input {
   transform: translateX(60px);
 }
 
-.menu__item-link:hover ~ .marquee .marquee__inner {
+.menu__item-link:hover~.marquee .marquee__inner {
   opacity: 1;
   transform: translateX(0px);
   transition-duration: 0.4s;
@@ -198,6 +200,39 @@ input {
   font-size: 7vw;
   padding: 0 1vw;
   line-height: 1.15;
+}
+
+@media (max-width: 1920px) {
+
+  .menu__item-link,
+  .marquee span {
+    white-space: nowrap;
+    font-size: 5.8vw;
+    padding: 0 1vw;
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 2560px) {
+
+  .menu__item-link,
+  .marquee span {
+    white-space: nowrap;
+    font-size: 3vw;
+    padding: 0 1vw;
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 1440px) {
+
+  .menu__item-link,
+  .marquee span {
+    white-space: nowrap;
+    font-size: 6vw;
+    padding: 0 1vw;
+    line-height: 1.15;
+  }
 }
 
 .marquee span {
@@ -223,9 +258,12 @@ input {
   scale: 0.9;
   left: 20%;
   position: absolute;
-  right: 0%; /* Align the div to the right of the page */
-  top: 0.2%; /* Center the div vertically */
+  right: 0%;
+  /* Align the div to the right of the page */
+  top: 0.2%;
+  /* Center the div vertically */
   transform: translateY(-20%, -50%);
   mix-blend-mode: difference;
-  z-index: -15; /*behind all the divs */
+  z-index: -15;
+  /*behind all the divs */
 }

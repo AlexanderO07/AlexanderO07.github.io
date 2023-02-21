@@ -1,3 +1,4 @@
+console.clear(); //annoying extension errors removal
 let windowWidth = window.innerWidth;
 
 window.addEventListener("load", function() {
